@@ -34,7 +34,7 @@ nginx::resource::server {'proxy.domain.com':
     resolver	=>	['8.8.8.8','8.8.4.4'],
     proxy		=> 'http://$http_host$uri$is_args$args',
     format_log	=> 'proxy_log',
-    
+    }
 nginx::log_format {
 	'proxy_log'=> '$remote_addr	$request  $request_time  - $status $http_referer'
 	}
